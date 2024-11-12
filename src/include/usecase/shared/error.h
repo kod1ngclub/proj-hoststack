@@ -1,12 +1,12 @@
 #pragma once
 
 typedef enum {
-    NONE,
-} ErrorCode;
+    USECASE_ERROR_CODE_NONE,
+} UsecaseErrorCode;
 
-typedef const char* const ErrorBody;
+typedef const char* const UsecaseErrorBody;
 
 typedef struct {
-    const ErrorCode code;
-    const ErrorBody body;
-} Result;
+    const UsecaseErrorCode code;
+    const UsecaseErrorBody body;
+} UsecaseResult;
