@@ -12,21 +12,21 @@
 #include "shared/ref.h"
 
 // usecase functions
-Result ReadConfig(
+UsecaseResult ReadConfig(
     REF(Config, config)
 );
 
-Result ReadUsers(
+UsecaseResult ReadUsers(
     REF_LIST(User, users)
 );
 
-Result KickUser(
+UsecaseResult KickUser(
     UserId id,
 
     REF(User, user)
 );
 
-Result BanUser(
+UsecaseResult BanUser(
     UserId id,
 
     REF(User, user)

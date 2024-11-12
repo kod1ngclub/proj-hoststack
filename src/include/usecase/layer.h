@@ -5,44 +5,56 @@
 #include "../entity/layer/group.h"
 #include "../entity/layer/item.h"
 
+// service
+#include "../service/store.h"
+
 // usecase error model
+#include "shared/dep.h"
 #include "shared/error.h"
 
 // REF define util
 #include "shared/ref.h"
 
 // usecase functions
-Result ReadLayerIds(
+UsecaseResult ReadLayerIds(
+    DEP(Store, layerstore),
+
     REF_LIST(LayerId, layers)
 );
 
-Result ReadLayer(
+UsecaseResult ReadLayer(
+    DEP(Store, layerstore),
     LayerId id,
 
     REF(Layer, layer)
 );
 
-Result ReadtGroup(
+UsecaseResult ReadtGroup(
+    DEP(Store, groupstore),
     GroupId id,
 
     REF(GroupId, group)
 );
 
-Result ReadItem(
+UsecaseResult ReadItem(
+    DEP(Store, itemstore),
     ItemId id,
 
     REF(Item, item)
 );
 
-Result CreateItem(
-    LayerId layer_id,
+UsecaseResult CreateItem(
+    DEP(Store, groupstore),
+    DEP(Store, itemstore),
     GroupId group_id,
     ItemContent content,
 
     REF(Item, item)
 );
 
-Result DeprecateItem(
+UsecaseResult DeprecateItem(
+    DEP(Store, groupstore),
+    DEP(Store, itemstore),
     ItemId id,
 
     REF(Item, item)

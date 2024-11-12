@@ -10,23 +10,23 @@
 #include "shared/ref.h"
 
 // usecase functions
-Result ReadPanel(
+UsecaseResult ReadPanel(
     REF(Panel, panel)
 );
 
-Result ReadNote(
+UsecaseResult ReadNote(
     NoteId id,
 
     REF(Note, note)
 );
 
-Result CreateNote(
+UsecaseResult CreateNote(
     NoteContent content,
 
     REF(Note, note)
 );
 
-Result DeprecateNote(
+UsecaseResult DeprecateNote(
     NoteId id,
 
     REF(Note, note)
