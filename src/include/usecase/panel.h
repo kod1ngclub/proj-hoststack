@@ -10,8 +10,7 @@
 #include "shared/ref.h"
 
 UsecaseResult ReadPanel(
-    DEP(Store, panelstore),
-
+    DEP(Store, notestore),
     REF(Panel, panel)
 );
 
@@ -23,7 +22,6 @@ UsecaseResult ReadNote(
 );
 
 UsecaseResult CreateNote(
-    DEP(Store, panelstore),
     DEP(Store, notestore),
     NoteContent content,
 
@@ -31,7 +29,6 @@ UsecaseResult CreateNote(
 );
 
 UsecaseResult DeprecateNote(
-    DEP(Store, panelstore),
     DEP(Store, notestore),
     NoteId id,
 

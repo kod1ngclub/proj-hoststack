@@ -4,5 +4,5 @@
 #include "../shared/list.h"
 
 typedef struct {
-    LIST(NoteId, notes);
+    LIST(Note, notes);
 } Panel;
