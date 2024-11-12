@@ -1,21 +1,16 @@
 #pragma once
 
-// entity
 #include "../entity/layer/layer.h"
 #include "../entity/layer/group.h"
 #include "../entity/layer/item.h"
 
-// service
 #include "../service/store.h"
 
-// usecase error model
-#include "shared/dep.h"
 #include "shared/error.h"
 
-// REF define util
+#include "shared/dep.h"
 #include "shared/ref.h"
 
-// usecase functions
 UsecaseResult ReadLayerIds(
     DEP(Store, layerstore),
 

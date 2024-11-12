@@ -1,19 +1,14 @@
 #pragma once
 
-// entity
 #include "../entity/panel/panel.h"
 
-// service
 #include "../service/store.h"
 
-// usecase error model
-#include "shared/dep.h"
 #include "shared/error.h"
 
-// REF define util
+#include "shared/dep.h"
 #include "shared/ref.h"
 
-// usecase functions
 UsecaseResult ReadPanel(
     DEP(Store, panelstore),
 

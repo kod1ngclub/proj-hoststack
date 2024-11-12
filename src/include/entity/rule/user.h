@@ -9,10 +9,10 @@ typedef const char* const UserName;
 typedef const char* const Password;
 
 typedef struct {
-    const UserId id;
+    UserId id;
 
-    const UserName name;
-    const Password password;
+    UserName name;
+    Password password;
     const Phone phone;
 
     const Role role;

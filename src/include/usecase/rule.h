@@ -1,21 +1,16 @@
 #pragma once
 
-// entity
 #include "../entity/rule/config.h"
 #include "../entity/rule/role.h"
 #include "../entity/rule/user.h"
 
-// service
 #include "../service/store.h"
 
-// usecase error model
 #include "shared/error.h"
-#include "shared/dep.h"
 
-// REF define util
+#include "shared/dep.h"
 #include "shared/ref.h"
 
-// usecase functions
 UsecaseResult ReadConfig(
     DEP(Store, configstore),
     

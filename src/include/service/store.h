@@ -1,13 +1,10 @@
 #pragma once
 
-// entity or shared datatype
 #include "shared/any.h"
-#include "../entity/shared/bool.h"
+#include "shared/bool.h"
 
-// service error model
 #include "shared/error.h"
 
-// REF define util
 #include "shared/ref.h"
 
 typedef struct Store_t Store;
@@ -48,6 +45,7 @@ typedef ServiceResult (*StoreDrop)(
 
 struct Store_t {
     StoreName name;
+    
     const StoreReadFunc read;
     const StoreCursorFunc cursur;
     const StoreCreateFunc create;
