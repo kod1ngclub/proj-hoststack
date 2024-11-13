@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../shared/daterange.h"
 #include "../shared/bool.h"
 
 typedef const char* const ItemId;
@@ -9,5 +10,6 @@ typedef struct {
     ItemId id;
     
     ItemContent content;
+    const DateRange range;
     const bool deprecated;
 } Item;
