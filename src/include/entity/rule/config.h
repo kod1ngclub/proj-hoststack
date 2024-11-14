@@ -2,7 +2,7 @@
 
 #include "../shared/bool.h"
 
-typedef struct {
+typedef struct {    
     // item management
     const Bool GUEST_READ_ITEM;
     const Bool GUEST_CREATE_ITEM;
