@@ -1,56 +1,67 @@
 #pragma once
 
 #include "../entity/layer/layer.h"
-#include "../entity/layer/group.h"
 #include "../entity/layer/item.h"
+#include "../entity/rule/user.h"
 
-#include "../service/store.h"
+#include "../service/layer.h"
+#include "../service/config.h"
 
 #include "shared/error.h"
 
 #include "shared/dep.h"
 #include "shared/ref.h"
 
-UsecaseResult ReadLayerIds(
-    DEP(Store, layerstore),
+UsecaseResult ReadLayerIndex(
+    DEP(LayerStore, layerstore),
+    DEP(ConfigStore, configstore),
 
-    REF_LIST(LayerId, layers)
+    User user,
+
+    REF_LIST(LayerName, layernames)
 );
 
 UsecaseResult ReadLayer(
-    DEP(Store, layerstore),
-    LayerId id,
+    DEP(LayerStore, layerstore),
+    DEP(ConfigStore, configstore),
+
+    User user,
+    LayerName name,
 
     REF(Layer, layer)
 );
 
-UsecaseResult ReadtGroup(
-    DEP(Store, groupstore),
-    GroupId id,
-
-    REF(GroupId, group)
-);
-
-UsecaseResult ReadItem(
-    DEP(Store, itemstore),
-    ItemId id,
-
-    REF(Item, item)
-);
-
 UsecaseResult CreateItem(
-    DEP(Store, groupstore),
-    DEP(Store, itemstore),
-    GroupId group_id,
+    DEP(LayerStore, layerstore),
+    DEP(ConfigStore, configstore),
+
+    User user,
+    LayerName layername,
     ItemContent content,
 
-    REF(Item, item)
+    REF(Layer, new_layer)
 );
 
 UsecaseResult DeprecateItem(
-    DEP(Store, groupstore),
-    DEP(Store, itemstore),
-    ItemId id,
+    DEP(LayerStore, layerstore),
+    DEP(ConfigStore, configstore),
 
-    REF(Item, item)
+    User user,
+    LayerName layername,
+    ItemId itemid,
+
+    REF(Layer, new_layer)
+);
+
+UsecaseResult ForkItem(
+    DEP(LayerStore, layerstore),
+    DEP(ConfigStore, configstore),
+
+    User user,
+    LayerName layername,
+    ItemId itemid,
+    ItemContent content,
+    DateRange range,
+
+    REF(Layer, Item)
 );
