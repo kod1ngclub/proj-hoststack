@@ -14,7 +14,7 @@
 
 UsecaseResult KickUser(
     DEP(UserStore, userstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     UserId target,
@@ -24,7 +24,7 @@ UsecaseResult KickUser(
 
 UsecaseResult BanUser(
     DEP(UserStore, userstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     UserId target,

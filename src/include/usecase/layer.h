@@ -14,7 +14,7 @@
 
 UsecaseResult ReadLayerIndex(
     DEP(LayerStore, layerstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
 
@@ -23,7 +23,7 @@ UsecaseResult ReadLayerIndex(
 
 UsecaseResult ReadLayer(
     DEP(LayerStore, layerstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     LayerName name,
@@ -33,7 +33,7 @@ UsecaseResult ReadLayer(
 
 UsecaseResult CreateItem(
     DEP(LayerStore, layerstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     LayerName layername,
@@ -44,7 +44,7 @@ UsecaseResult CreateItem(
 
 UsecaseResult DeprecateItem(
     DEP(LayerStore, layerstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     LayerName layername,
@@ -55,7 +55,7 @@ UsecaseResult DeprecateItem(
 
 UsecaseResult ForkItem(
     DEP(LayerStore, layerstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     LayerName layername,

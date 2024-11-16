@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../entity/rule/config.h"
+#include "../entity/rule/permission.h"
 
 #include "shared/error.h"
 
 #include "shared/ref.h"
 
-typedef struct ConfigStore_t ConfigStore;
-typedef const ConfigStore* const ConfigStoreInstance;
+typedef struct PermissionStore_t PermissionStore;
+typedef const PermissionStore* const PermissionInstance;
 
-typedef ServiceResult (*ReadConfigStore)(
-    REF(Config)
+typedef ServiceResult (*ReadPermissionStore)(
+    REF(Permission)
 );
 
-struct ConfigStore_t {
-    const ReadConfigStore read;
+struct PermissionStore_t {
+    const ReadPermissionStore read;
 };
 
-ConfigStoreInstance NewConfigStore();
+PermissionInstance NewPermissionStore();

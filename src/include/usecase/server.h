@@ -14,7 +14,7 @@
 
 UsecaseResult StartServer(
     DEP(UserStore, userstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     UserId target,
@@ -24,7 +24,7 @@ UsecaseResult StartServer(
 
 UsecaseResult ShutdownServer(
     DEP(UserStore, userstore),
-    DEP(ConfigStore, configstore),
+    DEP(PermissionStore, permstore),
 
     User user,
     UserId target,

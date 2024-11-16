@@ -25,4 +25,4 @@ typedef struct {
 
     const Bool ADMIN_SHUTDOWN;
     const Bool ADMIN_RESTART;
-} Config;
+} Permission;
