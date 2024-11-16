@@ -22,5 +22,7 @@ typedef struct {
     // admin server management
     const Bool ADMIN_BAN;
     const Bool ADMIN_KICK;
+
     const Bool ADMIN_SHUTDOWN;
+    const Bool ADMIN_RESTART;
 } Config;
