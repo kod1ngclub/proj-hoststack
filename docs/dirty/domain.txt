@@ -1,2 +1,15 @@
 1. Log -> A single item
 2. Foreast -> A group of 'Log'
+
+
+---------- DOMAINS (entity) -----------
+
+1. task
+   - log
+   - forest
+
+2. rule
+   - permission
+   - config
+
+3. user and role

@@ -1,11 +1,11 @@
 #pragma once
 
 // include entity
-#include "../entity/rule/user.h"
+#include "../entity/user/user.h"
 
 // include service
 #include "../service/user.h"
-#include "../service/permission.h"
+#include "../service/rule.h"
 
 #include "shared/error.h"
 
@@ -14,7 +14,7 @@
 
 UsecaseResult KickUser(
     DEP(UserStore, userstore),
-    DEP(PermissionStore, permstore),
+    DEP(RuleStore, rulestore),
 
     User user,
     UserId target,
@@ -24,7 +24,7 @@ UsecaseResult KickUser(
 
 UsecaseResult BanUser(
     DEP(UserStore, userstore),
-    DEP(PermissionStore, permstore),
+    DEP(RuleStore, rulestore),
 
     User user,
     UserId target,

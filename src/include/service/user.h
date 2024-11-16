@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../entity/rule/role.h"
-#include "../entity/rule/user.h"
+#include "../entity/user/role.h"
+#include "../entity/user/user.h"
 
 #include "shared/error.h"
+#include "shared/bool.h"
 
 #include "shared/ref.h"
 
@@ -14,8 +15,8 @@ typedef ServiceResult (*UserStoreIndex)(
     REF_LIST(UserId)
 );
 
-typedef ServiceResult (*UserStoreReadById)(
-    UserId id,
+typedef ServiceResult (*UserStoreRead)(
+    UserName name,
 
     REF_LIST(User)
 );
@@ -34,7 +35,7 @@ typedef ServiceResult (*UserStoreBan)(
 
 struct UserStore_t {
     const UserStoreIndex index;
-    const UserStoreReadById read_by_id;
+    const UserStoreRead read;
     const UserStoreKick kick;
     const UserStoreBan ban;
 };

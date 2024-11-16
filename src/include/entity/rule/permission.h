@@ -4,20 +4,17 @@
 
 typedef struct {
     // item management
-    const Bool GUEST_READ_ITEM;
-    const Bool GUEST_CREATE_ITEM;
-    const Bool GUEST_DEPRECATE_ITEM;
-    const Bool GUEST_READ_STACKED;
+    const Bool GUEST_READ_LOG;
+    const Bool GUEST_CREATE_LOG;
+    const Bool GUEST_DEPRECATE_LOG;
 
-    const Bool MEMBER_READ_ITEM;
-    const Bool MEMBER_CREATE_ITEM;
-    const Bool MEMBER_DEPRECATE_ITEM;
-    const Bool MEMBER_READ_STACKED;
+    const Bool MEMBER_READ_LOG;
+    const Bool MEMBER_CREATE_LOG;
+    const Bool MEMBER_DEPRECATE_LOG;
 
-    const Bool ADMIN_READ_ITEM;
-    const Bool ADMIN_CREATE_ITEM;
-    const Bool ADMIN_DEPRECATE_ITEM;
-    const Bool ADMIN_READ_STACKED;
+    const Bool ADMIN_READ_LOG;
+    const Bool ADMIN_CREATE_LOG;
+    const Bool ADMIN_DEPRECATE_LOG;
 
     // admin server management
     const Bool ADMIN_BAN;

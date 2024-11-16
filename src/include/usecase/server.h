@@ -1,33 +1,31 @@
 #pragma once
 
 // include entity
-#include "../entity/rule/user.h"
+#include "../entity/user/user.h"
 
 // include service
 #include "../service/user.h"
-#include "../service/permission.h"
+#include "../service/rule.h"
 
 #include "shared/error.h"
 
 #include "shared/dep.h"
 #include "shared/ref.h"
 
-UsecaseResult StartServer(
+UsecaseResult ShutdownServer(
     DEP(UserStore, userstore),
-    DEP(PermissionStore, permstore),
+    DEP(RuleStore, rulestore),
 
     User user,
-    UserId target,
 
     REF(User, banned)
 );
 
-UsecaseResult ShutdownServer(
+UsecaseResult RestartServer(
     DEP(UserStore, userstore),
-    DEP(PermissionStore, permstore),
+    DEP(RuleStore, rulestore),
 
     User user,
-    UserId target,
 
     REF(User, banned)
 );
