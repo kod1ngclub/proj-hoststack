@@ -5,7 +5,7 @@
 #include "../entity/rule/user.h"
 
 #include "../service/layer.h"
-#include "../service/config.h"
+#include "../service/permission.h"
 
 #include "shared/error.h"
 

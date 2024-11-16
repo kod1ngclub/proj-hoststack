@@ -5,7 +5,7 @@
 
 // include service
 #include "../service/user.h"
-#include "../service/config.h"
+#include "../service/permission.h"
 
 #include "shared/error.h"
 
