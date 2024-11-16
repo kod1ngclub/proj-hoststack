@@ -1,0 +1,10 @@
+1. entity
+2. usecase
+3. service
+4. std lib and 3rd-party lib
+
+in each category
+1. unique domain
+2. shared domainerr
+3. error model or utils
+

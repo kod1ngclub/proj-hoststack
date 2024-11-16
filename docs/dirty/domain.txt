@@ -1,0 +1,2 @@
+1. Log -> A single item
+2. Foreast -> A group of 'Log'

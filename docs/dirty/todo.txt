@@ -1,0 +1,16 @@
+[v] 일단 Store로 DEP 주입 끝내기
+
+[v] 다른 서비스도 만들고 DEP 주입
+
+[v] 그 다음에 대대적인 리펙토링
+
+[v] 강한 결합을 기준으로 entity 재설계
+[v] usecase도 재설계
+[v] Lastly, Rewrite Service by CreateNote()
+
+[v] Not store API
+
+[v] user.h 유스케이스 작성하기
+
+
+
