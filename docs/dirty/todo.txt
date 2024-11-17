@@ -16,4 +16,18 @@
 [ ] apply generic with macro in service and usecase
 
 
+=========FROM======
 
+Resulted(Log) somefunc();
+
+======TO======
+
+typedef struct {
+    ...
+} ResultedLog;
+
+ResultedLog somefunc();
+
+============
+
+This is example
