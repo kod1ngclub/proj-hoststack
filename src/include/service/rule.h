@@ -23,4 +23,4 @@ struct RuleStore_t {
     const RuleStoreReadConfig config;
 };
 
-RuleStoreInstance NewPermissionStore();
+RuleStoreInstance NewRuleStore();
