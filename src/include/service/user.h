@@ -41,3 +41,4 @@ struct UserStore_t {
 };
 
 UserStoreInstance NewUserStore();
+void FreeUserStore(UserStoreInstance instance);

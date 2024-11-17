@@ -49,6 +49,7 @@ struct TaskStor_t {
 };
 
 TaskStoreInstance NewTaskStore();
+void FreeTaskStore(TaskStoreInstance instance);
 
 // Filename of this is 'layer' but it actually means
 // 'Store API for layer and items'

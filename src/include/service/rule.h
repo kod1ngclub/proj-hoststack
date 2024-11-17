@@ -6,6 +6,7 @@
 #include "shared/error.h"
 
 #include "shared/ref.h"
+#include <stdlib.h>
 
 typedef struct RuleStore_t RuleStore;
 typedef const RuleStore* const RuleStoreInstance;
@@ -24,3 +25,4 @@ struct RuleStore_t {
 };
 
 RuleStoreInstance NewRuleStore();
+void FreeRuleStore(RuleStoreInstance instance);
