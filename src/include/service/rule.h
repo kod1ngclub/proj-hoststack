@@ -8,12 +8,12 @@
 typedef struct RuleStore_t RuleStore;
 typedef const RuleStore* const RuleStoreInstance;
 
-UseServiceResulted(Permission);
-UseServiceResulted(Config);
+GENERIC_SERVICE_RESULTED(Permission);
+GENERIC_SERVICE_RESULTED(Config);
 
-typedef Resulted(Permission) (*RuleStoreReadPermission)();
+typedef RESULTED(Permission) (*RuleStoreReadPermission)();
 
-typedef Resulted(Permission) (*RuleStoreReadConfig)();
+typedef RESULTED(Permission) (*RuleStoreReadConfig)();
 
 struct RuleStore_t {
     const RuleStoreReadPermission perm;

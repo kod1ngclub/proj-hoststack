@@ -8,23 +8,23 @@
 typedef struct TaskStore_t TaskStore;
 typedef const TaskStore* const TaskStoreInstance;
 
-UseServiceResultedList(ForestName);
-UseServiceResulted(Forest);
-UseServiceResulted(Log);
+GENERIC_SERVICE_RESULTED_LIST(ForestName);
+GENERIC_SERVICE_RESULTED(Forest);
+GENERIC_SERVICE_RESULTED(Log);
 
-typedef ResultedList(ForestName) (*TaskStoreIndex)();
+typedef RESULTED_LIST(ForestName) (*TaskStoreIndex)();
 
-typedef Resulted(Forest) (*TaskStoreReadForest)(
+typedef RESULTED(Forest) (*TaskStoreReadForest)(
     ForestName name
 );
 
-typedef Resulted(Log) (*TaskStoreCreateLog)(
+typedef RESULTED(Log) (*TaskStoreCreateLog)(
     ForestName forestname,
     LogContent content,
     DateRange range
 );
 
-typedef Resulted(Log) (*TaskStoreDeprecateLog)(
+typedef RESULTED(Log) (*TaskStoreDeprecateLog)(
     ForestName forestname,
     LogId id
 );

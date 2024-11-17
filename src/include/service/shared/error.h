@@ -11,8 +11,8 @@ typedef struct {
     const ServiceErrorBody body;
 } ServiceResult;
 
-#define UseServiceResulted(t) typedef struct  { ServiceResult result; const t data; } ServiceResulted##t
-#define UseServiceResultedList(t) typedef struct  { ServiceResult result; const t* const data; const int size; } ServiceResultedList##t
+#define GENERIC_SERVICE_RESULTED(t) typedef struct  { ServiceResult result; const t data; } SERVICE_RESULTED_##t
+#define GENERIC_SERVICE_RESULTED_LIST(t) typedef struct  { ServiceResult result; const t* const data; const int size; } SERVICE_RESULTED_LIST_##t
 
-#define Resulted(t) ServiceResulted##t
-#define ResultedList(t) ServiceResultedList##t
+#define RESULTED(t) SERVICE_RESULTED_##t
+#define RESULTED_LIST(t) SERVICE_RESULTED_LIST_##t

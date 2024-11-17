@@ -9,20 +9,20 @@
 typedef struct UserStore_t UserStore;
 typedef const UserStore* const UserStoreInstance;
 
-UseServiceResultedList(UserId);
-UseServiceResulted(User);
+GENERIC_SERVICE_RESULTED_LIST(UserId);
+GENERIC_SERVICE_RESULTED(User);
 
-typedef ResultedList(UserId) (*UserStoreIndex)();
+typedef RESULTED_LIST(UserId) (*UserStoreIndex)();
 
-typedef Resulted(User) (*UserStoreReadByName)(
+typedef RESULTED(User) (*UserStoreReadByName)(
     UserName name
 );
 
-typedef Resulted(User) (*UserStoreKick)(
+typedef RESULTED(User) (*UserStoreKick)(
     UserId id
 );
 
-typedef Resulted(User) (*UserStoreBan)(
+typedef RESULTED(User) (*UserStoreBan)(
     UserId id
 );
 
