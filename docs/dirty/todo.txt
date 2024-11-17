@@ -13,4 +13,7 @@
 [v] user.h 유스케이스 작성하기
 
 
+[ ] apply generic with macro in service and usecase
+
+
 
