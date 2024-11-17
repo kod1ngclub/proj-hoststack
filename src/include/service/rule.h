@@ -8,7 +8,7 @@
 #include "shared/ref.h"
 
 typedef struct RuleStore_t RuleStore;
-typedef const RuleStore_t* const RuleStoreInstance;
+typedef const RuleStore* const RuleStoreInstance;
 
 typedef ServiceResult (*RuleStoreReadPermission)(
     REF(Permission)
