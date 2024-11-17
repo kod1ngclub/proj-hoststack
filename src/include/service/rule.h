@@ -5,19 +5,15 @@
 
 #include "shared/error.h"
 
-#include "shared/ref.h"
-#include <stdlib.h>
-
 typedef struct RuleStore_t RuleStore;
 typedef const RuleStore* const RuleStoreInstance;
 
-typedef ServiceResult (*RuleStoreReadPermission)(
-    REF(Permission)
-);
+UseServiceResulted(Permission);
+UseServiceResulted(Config);
 
-typedef ServiceResult (*RuleStoreReadConfig)(
-    REF(Config)
-);
+typedef Resulted(Permission) (*RuleStoreReadPermission)();
+
+typedef Resulted(Permission) (*RuleStoreReadConfig)();
 
 struct RuleStore_t {
     const RuleStoreReadPermission perm;

@@ -6,36 +6,29 @@
 #include "shared/error.h"
 #include "shared/bool.h"
 
-#include "shared/ref.h"
-
 typedef struct UserStore_t UserStore;
 typedef const UserStore* const UserStoreInstance;
 
-typedef ServiceResult (*UserStoreIndex)(
-    REF_LIST(UserId)
+UseServiceResultedList(UserId);
+UseServiceResulted(User);
+
+typedef ResultedList(UserId) (*UserStoreIndex)();
+
+typedef Resulted(User) (*UserStoreReadByName)(
+    UserName name
 );
 
-typedef ServiceResult (*UserStoreRead)(
-    UserName name,
-
-    REF_LIST(User)
+typedef Resulted(User) (*UserStoreKick)(
+    UserId id
 );
 
-typedef ServiceResult (*UserStoreKick)(
-    UserId id,
-
-    REF_LIST(User)
-);
-
-typedef ServiceResult (*UserStoreBan)(
-    UserId id,
-
-    REF_LIST(User)
+typedef Resulted(User) (*UserStoreBan)(
+    UserId id
 );
 
 struct UserStore_t {
     const UserStoreIndex index;
-    const UserStoreRead read;
+    const UserStoreReadByName read_by_name;
     const UserStoreKick kick;
     const UserStoreBan ban;
 };

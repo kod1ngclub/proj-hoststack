@@ -5,47 +5,35 @@
 
 #include "shared/error.h"
 
-#include "shared/ref.h"
-
 typedef struct TaskStore_t TaskStore;
 typedef const TaskStore* const TaskStoreInstance;
 
-typedef ServiceResult (*TaskStoreIndex)(
-    REF_LIST(ForestName)
+UseServiceResultedList(ForestName);
+UseServiceResulted(Forest);
+UseServiceResulted(Log);
+
+typedef ResultedList(ForestName) (*TaskStoreIndex)();
+
+typedef Resulted(Forest) (*TaskStoreReadForest)(
+    ForestName name
 );
 
-typedef ServiceResult (*TaskStoreRead)(
-    ForestName name,
-
-    REF(ForestName)
-);
-
-typedef ServiceResult (*TaskStoreCreate)(
-    ForestName layername,
+typedef Resulted(Log) (*TaskStoreCreateLog)(
+    ForestName forestname,
     LogContent content,
-    DateRange range,
-
-    REF(Log)
+    DateRange range
 );
 
-typedef ServiceResult (*TaskStoreCopy)(
-    LogId,
-
-    REF(Log)
-);
-
-typedef ServiceResult (*TaskStoreDeprecate)(
-    ForestName name,
-    LogId id,
-
-    REF(Log)
+typedef Resulted(Log) (*TaskStoreDeprecateLog)(
+    ForestName forestname,
+    LogId id
 );
 
 struct TaskStor_t {
     const TaskStoreIndex index;
-    const TaskStoreRead read;
-    const TaskStoreCreate create;
-    const TaskStoreDeprecate deprecate;
+    const TaskStoreReadForest read_forest;
+    const TaskStoreCreateLog create_log;
+    const TaskStoreDeprecateLog deprecate_log;
 };
 
 TaskStoreInstance NewTaskStore();

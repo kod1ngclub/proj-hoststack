@@ -10,3 +10,9 @@ typedef struct {
     const ServiceErrorCode code;
     const ServiceErrorBody body;
 } ServiceResult;
+
+#define UseServiceResulted(t) typedef struct  { ServiceResult result; const t data; } ServiceResulted##t
+#define UseServiceResultedList(t) typedef struct  { ServiceResult result; const t* const data; const int size; } ServiceResultedList##t
+
+#define Resulted(t) ServiceResulted##t
+#define ResultedList(t) ServiceResultedList##t
