@@ -4,7 +4,6 @@
 
 #include "shared/error.h"
 #include "shared/bool.h"
-#include "shared/filter.h"
 
 typedef struct HostStore_t HostStore;
 typedef const HostStore* const HostStoreInstance;
