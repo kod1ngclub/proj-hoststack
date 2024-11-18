@@ -17,4 +17,4 @@ struct HostStore_t {
 };
 
 HostStoreInstance NewHostStore();
-void FreeUserStore(HostStoreInstance instance);
+void FreeHostStore(HostStoreInstance instance);
