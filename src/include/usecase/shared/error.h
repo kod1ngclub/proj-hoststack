@@ -11,8 +11,8 @@ typedef struct {
     const UsecaseErrorBody body;
 } UsecaseResult;
 
-#define GENERIC_USECASE_RESULTED(t) typedef struct  { UsecaseResult result; const t data; } USECASE_RESULTED_##t
-#define GENERIC_USECASE_RESULTED_LIST(t) typedef struct  { UsecaseResult result; const t* const data; const int size; } USECASE_RESULTED_LIST_##t
+#define MACRO_USECASE_RESULTED(t) typedef struct  { UsecaseResult result; const t data; } USECASE_RESULTED_##t
+#define MACRO_USECASE_RESULTED_LIST(t) typedef struct  { UsecaseResult result; const t* const data; const int size; } USECASE_RESULTED_LIST_##t
 
 #define RESULTED(t) USECASE_RESULTED_##t
 #define RESULTED_LIST(t) USECASE_RESULTED_LIST_##t

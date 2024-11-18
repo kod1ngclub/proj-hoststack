@@ -8,8 +8,8 @@
 typedef struct RuleStore_t RuleStore;
 typedef const RuleStore* const RuleStoreInstance;
 
-GENERIC_SERVICE_RESULTED(Permission);
-GENERIC_SERVICE_RESULTED(Config);
+MACRO_SERVICE_RESULTED(Permission);
+MACRO_SERVICE_RESULTED(Config);
 
 typedef RESULTED(Permission) (*RuleStoreReadPermission)();
 

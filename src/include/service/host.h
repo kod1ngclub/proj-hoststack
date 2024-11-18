@@ -8,7 +8,7 @@
 typedef struct HostStore_t HostStore;
 typedef const HostStore* const HostStoreInstance;
 
-GENERIC_SERVICE_RESULTED(Host);
+MACRO_SERVICE_RESULTED(Host);
 
 typedef RESULTED(Host)(*HostStoreReadHost)();
 

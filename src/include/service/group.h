@@ -8,8 +8,8 @@
 typedef struct GroupStore_t GroupStore;
 typedef const GroupStore* const GroupStoreInstance;
 
-GENERIC_SERVICE_RESULTED_LIST(GroupName);
-GENERIC_SERVICE_RESULTED(Group);
+MACRO_SERVICE_RESULTED_LIST(GroupName);
+MACRO_SERVICE_RESULTED(Group);
 
 typedef RESULTED_LIST(GroupName) (*GroupStoreIndex)();
 
