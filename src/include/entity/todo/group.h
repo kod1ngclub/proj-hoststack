@@ -9,5 +9,5 @@ typedef struct {
 
     const Item* items;
     const int size;
+    const bool deprecated;
 } Group;
-
